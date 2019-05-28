@@ -35,32 +35,30 @@ struct SpecificFunction : Function {
     std::function<T> function;
     size_t addCount, argCount;
     SpecificFunction(std::function<T> function)
-        : function(function),
-        addCount(1),
-        argCount(getArgumentCount(function))
+    : function(function),
+    addCount(1),
+    argCount(getArgumentCount(function))
     {}
 };
 
 class EventBus
 {
 private:
-    
     // Maps event names to functions
     mutable std::unordered_map<std::string, std::unique_ptr<Function>> mFunctions;
     
 public:
     EventBus()  = default;
     ~EventBus() = default;
-
+    
     template <typename Func>
     void Add(std::string str, const Func &function)
     {
         std::cout<<"Adding " << str << std::endl;
-
+        
         if (mFunctions.find(str) == mFunctions.end())
         {
-            auto func_ptr=std::make_unique<SpecificFunction<Func>>(std::function<Func>(function));
-            mFunctions[str]=std::move(func_ptr);
+            mFunctions.emplace(str , std::make_unique<SpecificFunction<Func>>(std::function<Func>(function)));
         }
         else
         {
@@ -68,7 +66,7 @@ public:
             static_cast<SpecificFunction<Func> &>(*mFunctions[str]).addCount++;
         }
     }
-
+    
     template <typename... Args>
     void Invoke(const std::string& str, Args&&... args) const
     {
@@ -77,18 +75,19 @@ public:
         assert(mFunctions.find(str) != mFunctions.end() && "Error: Event has not been added");
         
         typedef void Func(typename std::remove_reference<Args>::type...);
-
+        
         const Function &f = *mFunctions[str];
         const auto specificFunc = static_cast<const SpecificFunction<Func> &>(f);
         
-        // Verify that arg count is correct 
+        // Verify that arg count is correct
         assert(sizeof...(Args) == specificFunc.argCount && "Error: Arg count");
         
+        // Call functions
         for (auto idx = 0; idx < specificFunc.addCount; idx++)
             specificFunc.function(std::forward<Args>(args)...);
     }
-
-   
+    
+    
 };
 
 

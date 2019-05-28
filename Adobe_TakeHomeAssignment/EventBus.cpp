@@ -15,7 +15,7 @@
 
 //EventBus::EventBus()
 //{
-//    std::cout<<"Constructing EventBus"<<std::endl; 
+//    std::cout<<"Constructing EventBus"<<std::endl;
 //}
 //
 //
