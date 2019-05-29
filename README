@@ -3,10 +3,10 @@ EVENT BUS README
 --------------------------------------- Files: ---------------------------------------------
 
 Main.cpp: 
-	-Contains series of functions and example usage of Event Bus
+	-Contains series of functions and example usage of EventBus class
 	-Support of arbitrary function signatures (including string arguments) is demonstrated
 	-Cancellation behavior is demonstrated
-	-Error handling is demonstrated (argument count mismatch, and invoking unregistered events)
+	-Error handling is demonstrated (argument count mismatch, invocation of unregistered events)
 
 EventBus.cpp:
 	-Essentially empty (only constructor/destructor)
@@ -14,7 +14,7 @@ EventBus.cpp:
 EventBus.hpp:
 	-Contains implementation of 'Add' and 'Invoke'
 	-Both are templatized to support arbitrary functions and parameters
-	-Main data structure is map between event-strings and sets of (base classes to) functions
+	-Main data structure is map between event-strings and sets of (pointers to base classes of) functions
 	-Base Class functions are cast to their derived signatures when invoked or statically analyzed
 	-List of event-strings that have been canceled is maintained
 	-Cancellation: Functions with return-type 'cancelReturnT' cancel subsequent functions sharing event name 
