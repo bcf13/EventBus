@@ -1,0 +1,41 @@
+EVENT BUS README
+
+--------------------------------------- Files: ---------------------------------------------
+
+Main.cpp: 
+	-Contains series of functions and example usage of Event Bus
+	-Support of arbitrary function signatures (including string arguments) is demonstrated
+	-Cancellation behavior is demonstrated
+	-Error handling is demonstrated (argument count mismatch, and invoking unregistered events)
+
+EventBus.cpp:
+	-Essentially empty (only constructor/destructor)
+
+EventBus.hpp:
+	-Contains implementation of 'Add' and 'Invoke'
+	-Both are templatized to support arbitrary functions and parameters
+	-Main data structure is map between event-strings and sets of (base classes to) functions
+	-Base Class functions are cast to their derived signatures when invoked or statically analyzed
+	-List of event-strings that have been canceled is maintained
+	-Cancellation: Functions with return-type 'cancelReturnT' cancel subsequent functions sharing event name 
+
+Utilities.h:
+	-Defines 'cancelReturnT' type
+	-Contains functions to statically analyze std::function<T> instances
+	-Contains Function and (derived) SpecificFunction classes 
+
+--------------------------------------- Assumptions: ------------------------------------------
+	
+	-Assumes cancellation can be indicated via the signature of a function (see above)
+	-Assumes client code does not rely on return values (example functions are mostly void-return type)
+	-Does not explicitly handle Adding events after invocation occurs
+	-Assumes support of lambdas or potentially other callable-functions is not required 
+
+
+--------------------------------------- Other Notes: ------------------------------------------
+	
+	-Considered applying pimpl idiom to hide implementation from header, but was difficult with lots of
+	templatized functions 
+	-Considered maintaining map between strings and sets of indices into other structure to avoid 
+	duplicating storage of function pointers, but implementation was complex/awkward
+	-Notice that 'Invoke' perfect forwards its arguments to the underlying function when possible

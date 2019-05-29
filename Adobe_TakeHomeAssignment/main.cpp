@@ -17,6 +17,7 @@ void funcNoArgs2() {
     std::cout << "Executing funcNoArgs2" << std::endl;
 }
 
+// Custom return type indicates cancellation 
 cancelReturnT funcNoArgsWithCancel() {
     std::cout << "Executing funcNoArgsWithCancel" << std::endl;
     return {};
@@ -76,7 +77,7 @@ int main(int argc, const char * argv[]) {
     eventBus.Invoke(twoArgsEvent,   (std::string) "string arg", 42);
     
     // Error Detection Cases: (triggers assertion failures)
-    //eventBus.Invoke(noArgsEvent, (std::string) "Invalid Arg");
+    eventBus.Invoke(noArgsEvent,    (std::string) "Invalid Arg");
     eventBus.Invoke(unregisteredEvent);
     
 

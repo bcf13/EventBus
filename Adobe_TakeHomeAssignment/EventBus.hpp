@@ -19,8 +19,6 @@
 #include <set>
 #include "Utilities.h"
 
-
-
 class EventBus
 {
 private:
