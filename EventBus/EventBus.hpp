@@ -1,10 +1,4 @@
-//
-//  EventBus.hpp
-//  Adobe_TakeHomeAssignment
-//
-//  Created by Benjamin C Flowers on 5/14/19.
-//  Copyright © 2019 Benjamin C Flowers. All rights reserved.
-//
+// See README for details
 
 #ifndef EventBus_hpp
 #define EventBus_hpp
