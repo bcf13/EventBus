@@ -9,54 +9,77 @@
 #include <iostream>
 #include "EventBus.hpp"
 
-void freestanding() {
-    std::cout << "executing freestanding" << std::endl;
+void funcNoArgs() {
+    std::cout << "Executing funcNoArgs" << std::endl;
 }
 
-void freestandingInt(int iArg) {
-    std::cout << "executing freestandingInt " << iArg << std::endl;
+void funcNoArgs2() {
+    std::cout << "Executing funcNoArgs2" << std::endl;
 }
 
-void freestandingTwoArgs(int iArg, std::string s) {
-    std::cout << "executing freestandingTwoArgs " << iArg << s << std::endl;
+cancelReturnT funcNoArgsWithCancel() {
+    std::cout << "Executing funcNoArgsWithCancel" << std::endl;
+    return {};
 }
 
-void Random(int iArg, std::string s) {
-    std::cout << "Random " << iArg << s << std::endl;
+void funcNoArgs3() {
+    std::cout << "Executing funcZeroArgs3" << std::endl;
 }
+
+void funcStringArg(std::string s) {
+    std::cout << "Executing funcStringArg: " << s << std::endl;
+}
+
+void funcStringArg2(std::string s) {
+    std::cout << "Executing funcStringArg2: " << s << std::endl;
+}
+
+void funcTwoArgs(std::string s, int i) {
+    std::cout << "Executing funcTwoArgs: " << s << " , "<< i << std::endl;
+}
+
+void funcTwoArgs2(std::string s, int i) {
+    std::cout << "Executing funcTwoArgs2: " << s << " , "<< i << std::endl;
+}
+
+void funcUnregistered() {
+    std::cout << "Executing unregistered function: " << std::endl;
+}
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    
-    //func<int,int> f = Add_;
-    
+
     EventBus eventBus{};
- 
+
+    std::string noArgsEvent         = "noArgsEvent";
+    std::string stringArgEvent      = "stringArgEvent";
+    std::string twoArgsEvent        = "twoArgsEvent";
+    std::string unregisteredEvent   = "str3";
     
+    // No args
+    eventBus.Add(noArgsEvent,       funcNoArgs);
+    eventBus.Add(noArgsEvent,       funcNoArgs2);
+    eventBus.Add(noArgsEvent,       funcNoArgsWithCancel);
+    eventBus.Add(noArgsEvent,       funcNoArgs3); // won't execute
     
-    std::string s0 = "str0";
-    std::string s1 = "str1";
-    std::string s2 = "str2";
-    std::string s3 = "str3";
+    // String Arg
+    eventBus.Add(stringArgEvent,    funcStringArg);
+    eventBus.Add(stringArgEvent,    funcStringArg2);
     
-    eventBus.Add(s0, freestanding);
-    eventBus.Add(s1, freestandingInt);
-    eventBus.Add(s1, freestandingInt);
-    eventBus.Add(s2, freestandingTwoArgs);
+    // Two arguments
+    eventBus.Add(twoArgsEvent,      funcTwoArgs);
+    eventBus.Add(twoArgsEvent,      funcTwoArgs2);
     
-    //eventBus.Add(s3, Random);
+    // Invoke
+    eventBus.Invoke(noArgsEvent);
+    eventBus.Invoke(stringArgEvent, (std::string) "string arg");
+    eventBus.Invoke(twoArgsEvent,   (std::string) "string arg", 42);
     
-    //freestandingTwoArgs
-//    eventBus.Add(s, func0);
-//    eventBus.A
+    // Error Detection Cases: (triggers assertion failures)
+    //eventBus.Invoke(noArgsEvent, (std::string) "Invalid Arg");
+    eventBus.Invoke(unregisteredEvent);
     
-    eventBus.Invoke("str0");
-    eventBus.Invoke("str1",42);
-    eventBus.Invoke("str3", 42);
-    //eventBus.Invoke("str2", 42, (std::string)"potato", 69);
-    
-    
-    //std::cout << getArgumentCount(freestandingTwoArgs) << std::endl;
+
 
     return 0;
 }

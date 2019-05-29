@@ -2,4 +2,273 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Adobe_TakeHomeAssignment/EventBus.hpp"
+            timestampString = "580788189.639452"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "Add(const std::string&amp; str, const Func &amp;function)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Add&lt;void ()&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, void  const(&amp;)())"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580784220.2378711"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Add&lt;void (int)&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, void  const(&amp;)(int))"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580784220.240187"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Add&lt;void (_cancelArg)&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, void  const(&amp;)(_cancelArg))"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580784220.242182"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Add&lt;void (int, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, void  const(&amp;)(int, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;))"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580784220.2442321"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Adobe_TakeHomeAssignment/main.cpp"
+            timestampString = "580788189.639565"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "main(int argc, const char * argv[])"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Adobe_TakeHomeAssignment/main.cpp"
+            timestampString = "580788189.640141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "main(int argc, const char * argv[])"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Adobe_TakeHomeAssignment/EventBus.hpp"
+            timestampString = "580788189.640582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "Add(const std::string&amp; str, const Func &amp;function)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Add&lt;void ()&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, void  const(&amp;)())"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580787484.761672"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Add&lt;_cancelReturnT ()&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, _cancelReturnT  const(&amp;)())"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580787484.76401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Add&lt;void (std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, void  const(&amp;)(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;))"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580787484.7663161"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Add&lt;void (std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, int)&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, void  const(&amp;)(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, int))"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580787484.768419"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Adobe_TakeHomeAssignment/main.cpp"
+            timestampString = "580788189.640658"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "main(int argc, const char * argv[])"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Adobe_TakeHomeAssignment/EventBus.hpp"
+            timestampString = "580788189.6413"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "Invoke(const std::string&amp; str, Args&amp;&amp;... args)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Invoke&lt;&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;) const"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580788189.947167"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Invoke&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; &gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;&amp;) const"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580788189.949486"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void EventBus::Invoke&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, int&gt;(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;&amp;, int&amp;&amp;) const"
+                  moduleName = "Adobe_TakeHomeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjamincflowers/Desktop/Professional/Post_Duke_Jerbz/Companies/Adobe/Adobe_TakeHomeAssignment/Adobe_TakeHomeAssignment/EventBus.hpp"
+                  timestampString = "580788189.952457"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

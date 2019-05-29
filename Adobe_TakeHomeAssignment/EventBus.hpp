@@ -15,79 +15,72 @@
 #include <unordered_map>
 #include <utility>
 #include <memory>
+#include <vector>
+#include <set>
+#include "Utilities.h"
 
-// Deduces arg count for std functions (for error checking)
-template <typename R, typename ... Types>
-constexpr size_t getArgumentCount( std::function<R(Types ...)>)
-{
-    return sizeof...(Types);
-}
 
-// Function base class
-struct Function {
-    Function() = default;
-    virtual ~Function() = default;
-};
-
-// Derived function class for specific functions
-template <typename T>
-struct SpecificFunction : Function {
-    std::function<T> function;
-    size_t addCount, argCount;
-    SpecificFunction(std::function<T> function)
-    : function(function),
-    addCount(1),
-    argCount(getArgumentCount(function))
-    {}
-};
 
 class EventBus
 {
 private:
-    // Maps event names to functions
-    mutable std::unordered_map<std::string, std::unique_ptr<Function>> mFunctions;
+
+    // Associates event names with functions
+    mutable std::unordered_map<std::string, std::vector<std::unique_ptr<Function>>> mFunctions;
+
+    std::set<std::string> mCanceledEvents;
     
 public:
-    EventBus()  = default;
-    ~EventBus() = default;
+    EventBus();
+    ~EventBus();
     
     template <typename Func>
-    void Add(std::string str, const Func &function)
+    void Add(const std::string& str, const Func &function)
     {
-        std::cout<<"Adding " << str << std::endl;
         
-        if (mFunctions.find(str) == mFunctions.end())
+        auto ptr = std::make_unique<SpecificFunction<Func>>(std::function<Func>(function));
+ 
+        // If event already canceled, return
+        if (mCanceledEvents.find(str) != mCanceledEvents.end()) return;
+        
+        // Remember cancellation events
+        if (ptr->cancel) mCanceledEvents.insert(str);
+        
+        if (mFunctions.find(str) == mFunctions.end()) // New Event
         {
-            mFunctions.emplace(str , std::make_unique<SpecificFunction<Func>>(std::function<Func>(function)));
+            std::vector<std::unique_ptr<Function>> funcPtrs;
+            funcPtrs.emplace_back((std::make_unique<SpecificFunction<Func>>(std::function<Func>(function))));
+            mFunctions.emplace(str , std::move(funcPtrs));
         }
-        else
+        else // Already registered event
         {
-            // Increment add count
-            static_cast<SpecificFunction<Func> &>(*mFunctions[str]).addCount++;
+            mFunctions[str].emplace_back(std::make_unique<SpecificFunction<Func>>(std::function<Func>(function)));
         }
     }
     
     template <typename... Args>
     void Invoke(const std::string& str, Args&&... args) const
     {
-        std::cout<<"Invoking " << str << std::endl;
         // Verify that event has been registered already
-        assert(mFunctions.find(str) != mFunctions.end() && "Error: Event has not been added");
-        
+        assert(mFunctions.find(str) != mFunctions.end() && "Error: Event has not been registered");
+
         typedef void Func(typename std::remove_reference<Args>::type...);
-        
-        const Function &f = *mFunctions[str];
-        const auto specificFunc = static_cast<const SpecificFunction<Func> &>(f);
-        
-        // Verify that arg count is correct
-        assert(sizeof...(Args) == specificFunc.argCount && "Error: Arg count");
-        
-        // Call functions
-        for (auto idx = 0; idx < specificFunc.addCount; idx++)
-            specificFunc.function(std::forward<Args>(args)...);
+
+        // Visit each function associated with event 
+        for (const auto & Fptr : mFunctions[str])
+        {
+            const auto & specificFunc = static_cast<const SpecificFunction<Func> &>(*Fptr);
+    
+            // Verify that arg count is correct
+            assert(sizeof...(Args) == specificFunc.argCount && "Error: Arg count");
+
+            // Perfect forward if only one function
+            if (mFunctions[str].size() == 1)
+                specificFunc.function(std::forward<Args>(args)...);
+            else
+                specificFunc.function(args...);
+        }
     }
-    
-    
 };
 
 

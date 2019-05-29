@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		771FB20F229E046300613234 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		77487286228BAE7500EFDC1B /* Adobe_TakeHomeAssignment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Adobe_TakeHomeAssignment; sourceTree = BUILT_PRODUCTS_DIR; };
 		77487289228BAE7500EFDC1B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		77487290228BAED100EFDC1B /* EventBus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EventBus.cpp; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 				77487289228BAE7500EFDC1B /* main.cpp */,
 				77487290228BAED100EFDC1B /* EventBus.cpp */,
 				77487291228BAED100EFDC1B /* EventBus.hpp */,
+				771FB20F229E046300613234 /* Utilities.h */,
 			);
 			path = Adobe_TakeHomeAssignment;
 			sourceTree = "<group>";

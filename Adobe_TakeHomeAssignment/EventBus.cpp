@@ -11,17 +11,5 @@
 #include <stdio.h>
 #include <iostream>
 
-
-
-//EventBus::EventBus()
-//{
-//    std::cout<<"Constructing EventBus"<<std::endl;
-//}
-//
-//
-//
-//
-//EventBus::~EventBus()
-//{
-//    std::cout<<"Deconstructing EventBus"<<std::endl;
-//}
+EventBus::EventBus()  = default;
+EventBus::~EventBus() = default;
