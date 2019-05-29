@@ -39,3 +39,13 @@ Utilities.h:
 	-Considered maintaining map between strings and sets of indices into other structure to avoid 
 	duplicating storage of function pointers, but implementation was complex/awkward
 	-Notice that 'Invoke' perfect forwards its arguments to the underlying function when possible
+
+--------------------------------------- Example Output: ------------------------------------------
+Executing funcNoArgs
+Executing funcNoArgs2
+Executing funcNoArgsWithCancel
+Executing funcStringArg: string arg
+Executing funcStringArg2: string arg
+Executing funcTwoArgs: string arg , 42
+Executing funcTwoArgs2: string arg , 42
+Assertion failed: (sizeof...(Args) == specificFunc.argCount && "Error: Arg count"), function Invoke, file... 
